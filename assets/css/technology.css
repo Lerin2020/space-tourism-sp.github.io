@@ -1,0 +1,479 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../technology/background-technology-desktop.jpg);
+    width: 100vw;
+    height: 100vh;
+    font-family: 'bellefair';
+    overflow: hidden;
+}
+nav {
+    height: 12vh;
+    width: calc(100vw - 55px);
+    margin-left: 55px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    transform: translateY(50%);
+}
+nav > img {
+    width: 48px;
+    height: 48px;
+    align-self: center;
+    justify-self: center;
+}
+nav > .nav-list {
+    display:flex;
+    justify-content:space-evenly;
+    flex-basis: 55%;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: white;
+    list-style-type: none;
+    align-items: center;
+}
+nav > hr {
+    width: 40%;
+    border: 1px solid rgba(151, 151, 151, 0.25);
+    height: 1px;
+    align-self: center;
+    position: absolute;
+    left: 7%;
+    z-index: 2;
+}
+nav > .burger {
+    display: none;
+}
+nav >.nav-list > li {
+    position: relative;
+    margin-left: -10%;
+    height: 100%;
+}
+.nav-list > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'barlow condensed', cursive;
+    font-weight: 300;
+    letter-spacing: 2px;
+    display: block;
+    padding-top: calc(5vh - 5px);
+    height: 100%;
+}
+.nav-list > li > a > span {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+.nav-list > li > #active {
+    width: 100% !important;
+    opacity: 1;
+    visibility: visible;
+    border: 2px solid #fff;
+}
+.nav-list > li > .indicator {
+    visibility: hidden;
+    opacity: 0;
+    width: 0%;
+    position: absolute;
+    bottom: 0%;
+    border: 2px solid #979797;
+    transition: all 250ms ease;
+}
+.nav-list > li:hover > .indicator {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+}
+
+.body {
+    height: 75vh;
+    width: 90vw;
+    margin-left:auto;
+    color: white;
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transform: translateY(15vh);
+}
+.body > div {
+    position: absolute;
+    top: -5%;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: 'barlow condensed';
+    letter-spacing: 0.5ch;
+    text-transform: uppercase;
+}
+
+section > div > span {
+    color: #979797;
+    font-weight: bold;
+}
+section > div > p{
+    display: inline;
+    margin-left: 24px;
+}
+
+section > main {
+    height: 80%;
+    margin-bottom: 10vh;
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    column-gap: 0em;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+main > img{
+    grid-column: 3/4;
+    height: 100%;
+    object-fit: cover;
+    grid-row: 1/4;
+}
+
+main > .numbers{
+    display: flex;
+    flex-direction: column;
+    grid-row: 2/3;
+    height: 100%;
+    justify-content: space-between;
+    align-items: space-between;
+    
+}
+
+main > .numbers > button {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid rgba(151, 151, 151, 0.25);
+    transition: all 250ms ease;
+    font-size: 32px;
+    color: white;
+    font-family: 'bellefair';
+    cursor:pointer;
+}
+main > .numbers > button:hover {
+    border: 1px solid #fff;
+}
+main > .numbers > .chosen {
+    background-color: #fff;
+    color: #0B0D17;
+}
+
+main > .information {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-row: 2/3;
+}
+
+main > .information > .terms {
+    color: #D0D6F9;
+    font-family: 'barlow condensed';
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.5ch;
+}
+main > .information > .header {
+    color: #fff;
+    font-family: 'bellefair';
+    text-transform: uppercase;
+    font-size: 56px;
+    margin-top: 0.5em;
+}
+main > .information > .info {
+    color: #D0D6F9;
+    font-family: 'barlow';
+    font-size: 18px;
+    line-height: 32px;
+    width: 70%;
+    margin-top: 1em;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: url(../technology/background-technology-tablet.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    nav {
+        transform: translate(0);
+    }
+    nav > hr {
+        display: none;
+    }
+    nav > .burger {
+        display: none;
+    }
+    nav > .nav-list {
+        display: flex;
+        flex-basis: 60%;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        justify-content: space-evenly;
+    }
+    .nav-list > li > a > span {
+        display: none;
+    }
+   nav > .nav-list > li {
+        margin: 0;
+        padding: 0;
+    }
+    section.body{
+        display: flex;
+        width: 90vw;
+        height: 100vh;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+        transform: translateY(0vh);
+        position: relative;
+    }
+
+    section.body > div {
+        font-size: 20px;
+        top: 2.5vh;
+        left: 0;
+    }
+
+    main.info {
+        justify-self: center;
+        display: grid;
+        column-gap: 0em;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+    main.info > .numbers {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 40%;
+        justify-self: center;
+        margin-top: 2em;
+        margin-bottom: 2.5vh;
+    }
+    main.info >.numbers > button {
+        align-self: flex-end;
+    }
+    main.info > .information {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        text-align: center;
+        justify-self: center;
+        margin-top: 4em;
+    }
+    main.info > .information > .terms{
+        text-align: center;
+        font-size: 16px;
+    }
+    main.info > .information > .header{
+        text-align: center;
+        font-size: 40px;
+    }
+    main.info > .information > .info{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 16px;
+        width: 70%
+    }
+    main.info > img {
+        aspect-ratio: 768/310;
+        width: 100vw;
+        transform: translateX(-5vw);
+        height: 310px;
+        position: absolute;
+    }
+}   
+
+@media (max-width: 425px) {
+    body {
+        background: url(../technology/background-technology-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+    body, html {
+        overflow: hidden;
+    }
+    nav {
+        height: 10vh;
+        justify-content: space-between;
+        z-index: 1;
+        margin-left: 20px;
+        width: 95vw;
+    }
+    nav > img {
+        width: 40px;
+        height: 40px;
+        align-self: center;
+        justify-self: center;
+    }
+    nav > .burger {
+        display: block;
+        width: 50px;
+        height: 40px;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: all 250ms ease;
+        transition-delay:100ms;
+        
+    }
+    nav > .burger > .line1 {
+        width:30px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 6px;
+        z-index: 2;
+        transition: all 250ms ease;
+        transition-delay:100ms;
+    }
+    nav > .burger > .line2 {
+        width:30px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 6px;
+        z-index: 2;
+        transition: all 250ms ease;
+        transition-delay:100ms;
+    }
+    nav > .burger > .line3 {
+        width:30px;
+        height: 3px;
+        background-color: white;
+        z-index: 2;
+        transition: all 250ms ease;
+        transition-delay:100ms;
+    }
+    nav > .active > .line1 {
+        transform: translateY(12px) rotate(45deg);
+    }
+    nav > .active > .line2 {
+        transform: translateX(10px);
+        opacity: 0;
+    }
+    nav > .active > .line3 {
+        transform:translateY(-6px) rotate(-45deg)
+    }
+
+    nav > .nav-list{
+        display: block;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        width: 70vw;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10vh;
+        transform: translateX(100%);
+        transition: transform 250ms ease;
+    }
+    nav > .active {
+        transform: translateX(0);
+    }
+    nav >.nav-list > li {
+        height: 10%;
+    }
+    nav >.nav-list > li > a {
+        z-index: 3;
+        margin-left: 32px;
+    }
+    .nav-list > li > .indicator {
+        visibility: hidden;
+        opacity: 1;
+        width: 1%;
+        position: absolute;
+        height: 100%;
+        right: 0;
+        background-color: #fff;
+        border: 2px solid #fff;
+        transition: all 250ms ease;
+    }
+    .nav-list > li:hover > .indicator {
+        visibility: hidden;
+        opacity: 1;
+        width: 1%;
+    }
+    .nav-list > li > #active {
+        visibility: visible;
+        opacity: 1;
+        width: 1% !important;
+        position: absolute;
+        height: 100%;
+        right: 0;
+        border: 2px solid #fff;
+    }
+    nav >.nav-list > li >a> span{
+    display: inline-block;
+    }
+    section.body{
+        display: flex;
+        width: 90vw;
+        height: 90vh;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+        transform: translateY(0vh);
+        position: relative;
+    }
+    section.body > div {
+    width: 100%;
+    text-align: center;
+    }
+    main.info{
+        grid-template-rows: 1fr 1fr 2.75fr;
+        height: 100%;
+        transform: translateY(10vh);
+    }
+    main.info > .numbers {
+        grid-row: 3/4;
+        align-self: flex-start;
+        margin-top: 0em;
+        justify-content: space-around;
+    }
+    main.info > .numbers > button {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+        align-self: flex-start;
+    }
+    main.info > img {
+        width: 100vw;
+        transform: translateX(-5vw);
+        height: 170px;
+        top: 10vh;
+    }
+    main.info > .information{
+        width: 90vw;
+        align-self: start;
+    }
+    main.info > .information > .info{
+        width: 100%;
+        margin-top: 1em;
+        font-size: 0.9em;
+    }
+    main.info > .information > .header{
+        font-size: 2em;
+    }
+}

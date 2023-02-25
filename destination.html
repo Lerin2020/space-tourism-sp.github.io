@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/destination.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+  <nav>
+    <img src="./assets/shared/logo.svg" alt="logo">
+    <hr>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="./index.html"><span>00</span>Home</a>
+  
+        <hr class="indicator"/>
+      </li>
+      <li class="nav-item">
+        <a href="./destination.html"><span>01</span>Destination</a>
+  
+        <hr class="indicator" id="active"/>
+      </li>
+      <li class="nav-item">
+        <a href="./crew.html"><span>02</span>crew</a>
+  
+        <hr class="indicator"/>
+      </li>
+      <li class="nav-item">
+        <a href="./technology.html"><span>03</span>technology</a>
+  
+        <hr class="indicator"/>
+      </li>
+  
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+ <section>
+  <div>
+    <span>01</span><p>pick your destination</p>
+  </div>
+  <main>
+  <img src="./assets/destination/image-moon.png" alt="moon image" id="image">
+  <ul class="body-nav-list">
+    <li class="body-nav-item">
+    Moon
+
+      <hr class="body-indicator active" id="check"/>
+    </li>
+    <li class="body-nav-item">
+      mars
+
+      <hr class="body-indicator"/>
+    </li>
+    <li class="body-nav-item">
+      europa
+
+      <hr class="body-indicator"/>
+    </li>
+    <li class="body-nav-item">
+     titan
+
+      <hr class="body-indicator"/>
+    </li>
+  </ul>
+  <div class="moon">
+  <div class="name">
+    moon
+  </div>
+  <p id="info">
+    See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.
+  </p>
+  <hr>
+</div>
+
+  <div class="details">
+    <aside>
+      <p class="m">AVg.distance</p>
+      <p class="distance">384,000 KM</p>
+    </aside>
+    <aside>
+      <p class="m">Est. travel time</p>
+      <p class="time">3 days</p>
+    </aside>
+  </div>
+</main>
+ </section>
+
+
+ <script src="./assets/app/destination.js"></script>
+ <script src="./assets/app/burger.js"></script>
+</body>
+</html>
