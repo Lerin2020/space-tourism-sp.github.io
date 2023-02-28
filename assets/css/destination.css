@@ -372,10 +372,12 @@ main > .details > aside > .time{
         background: url(../destination/background-destination-mobile.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        height: 100vh;
+        height: 1024px;
+        width: 100vw;
+        overflow-x: hidden;
     }
-    body, html {
-        overflow: hidden;
+    body,html {
+        overflow-x: hidden;
     }
     nav {
         height: 10vh;
@@ -383,6 +385,10 @@ main > .details > aside > .time{
         z-index: 1;
         margin-left: 20px;
         width: 95vw;
+        position: fixed;
+        transform: translateY(0);
+        margin-top: 2vh;
+        transition: 250ms;
     }
     nav > img {
         width: 40px;
@@ -428,6 +434,9 @@ main > .details > aside > .time{
         transition: all 250ms ease;
         transition-delay:100ms;
     }
+    nav > div.active{
+        transform: translateY(0vh);
+    }
     nav > .active > .line1 {
         transform: translateY(12px) rotate(45deg);
     }
@@ -449,14 +458,15 @@ main > .details > aside > .time{
         justify-content: center;
         align-items: center;
         padding-top: 10vh;
-        transform: translateX(100%);
+        transform: translate(100%, -2.5vh);
         transition: transform 250ms ease;
+        
     }
     nav > .active {
-        transform: translateX(0);
+        transform: translate(0%, -2.5vh);
     }
     nav >.nav-list > li {
-        height: 10%;
+        height: 10vh;
     }
     nav >.nav-list > li > a {
         z-index: 3;
@@ -490,20 +500,31 @@ main > .details > aside > .time{
     nav >.nav-list > li >a> span{
     display: inline-block;
     }
+    section{
+        height: 100%;
+    }
     section > div {
         font-size: 1em;
         text-align: center;
         width: 100%;
-        top: 0vh;
+        top: 15vh;
+    }
+    section  > main {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(1vh);
     }
     main > img {
         width: 170px;
         grid-column: 1/2;
         grid-row: 1/2;
-        justify-self: center;
+        align-self: center;
     }
     main > .body-nav-list {
-        margin-top: 1em;
         max-height: 25px;
     }
     main > .body-nav-list >li {
@@ -525,12 +546,14 @@ main > .details > aside > .time{
     }
     main > .moon > .name {
         font-size: 3.25em;
+        margin-top: 0;
     }
     main > .moon > #info {
         font-size: 15px;
-        width: 80%;
-        margin: 0 auto;
+        width: 100%;
         line-height: 25px;
+        margin: 1em auto;
+        height: 15vh;
     }
     main > .moon >hr {
         margin-top: 1.5em;
@@ -540,7 +563,7 @@ main > .details > aside > .time{
         flex-direction: column;
         justify-content: space-between;
         width: 80%;
-        justify-self: center;
+        align-self: center;
         text-align: center;
         margin-top: 0;
     }
@@ -549,13 +572,12 @@ main > .details > aside > .time{
         color: #D0D6F9;
         font-size: 14px;
         letter-spacing: 1ch;
-        margin-top: 1.5em;
     }
     main > .details > aside > .distance{
         font-size: 28px;
-        margin-top: 0.5em;
     }
-    main > .details > aside > .time{
-        margin-top: 0.5em;
+
+    main > .details > aside:nth-child(2) {
+        margin-top: 2em;
     }
 }
