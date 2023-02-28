@@ -5,16 +5,16 @@ document.querySelector('.burger')
 })
 console.log('scroll')
 window.addEventListener('scroll', () => {
-    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50 && !(document.querySelector('.burger').classList.contains('active'))){
+    if(window.pageYOffset > 50 || window.pageYOffset > 50 && !(document.querySelector('.burger').classList.contains('active'))){
         document.querySelector('.navigation').style.opacity = '0'
     }else {
         document.querySelector('.navigation').style.opacity = ''
     }
 })
 window.addEventListener('scroll', () => {
-    if ((document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) && document.querySelector('.burger').classList.contains('active')) {
+    if ((window.pageYOffset > 50 || window.pageYOffset > 50) && document.querySelector('.burger').classList.contains('active')) {
         document.querySelector('#logo').style.visibility = 'hidden'
-      } else if ((document.body.scrollTop < 50 || document.documentElement.scrollTop < 50) && !(document.querySelector('.burger').classList.contains('active'))) {
+      } else if ((window.pageYOffset < 50 || window.pageYOffset < 50) && !(document.querySelector('.burger').classList.contains('active'))) {
         document.querySelector('#logo').style.visibility = 'visible'
       }else {
         document.querySelector('#logo').style.visibility = 'visible'
