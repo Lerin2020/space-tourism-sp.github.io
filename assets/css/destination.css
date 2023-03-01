@@ -139,7 +139,7 @@ main > img{
     grid-column: 1 /2;
     grid-row: 2 /4;
     align-self: end;
-    transition:opacity 500ms ease-in-out;
+    transition:all 250ms ease-in-out;
 }
 main > .details {
     display: flex;
@@ -149,17 +149,20 @@ main > .details {
     align-self: end;
     display: flex;
     align-items: space-between;
+    transition:all 250ms ease-in-out;
 }
 main > .moon {
     display: inline-flex;
     justify-content: space-between;
     flex-direction: column;
     grid-column: 2/3;
+    transition:all 250ms ease-in-out;
 }
 main > .moon > div{
     font-size: 100px;
     text-transform: uppercase;
     margin-top:0.5em;
+    transition:all 250ms ease-in-out;
 }
 main > .moon > p{
     font-size: 18px;
@@ -167,6 +170,7 @@ main > .moon > p{
     font-family: 'barlow';
     margin:0.5em 0;
     line-height: 32px;
+    transition:all 250ms ease-in-out;
 }
 main > .moon > hr{
     align-self: flex-end;
@@ -234,16 +238,19 @@ main > .details > aside > .m{
     font-family: 'barlow condensed';
     letter-spacing: 0.5ch;
     font-size: 14px;
+    transition:all 250ms ease-in-out;
 }
 main > .details > aside > .distance{
     text-transform: uppercase;
     color: #fff;
     font-size: 28px;
+    transition:all 250ms ease-in-out;
 }
 main > .details > aside > .time{
     text-transform: uppercase;
     color: #fff;
     font-size: 28px;
+    transition:all 250ms ease-in-out;
 }
 
 @media (max-width: 768px) {

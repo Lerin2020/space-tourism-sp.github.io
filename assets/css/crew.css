@@ -146,12 +146,14 @@ main >.name > .title {
     color: #979797;
     font-size: 32px;
     text-transform: uppercase;
+    transition: all 250ms ease;
 
 }
 main >.name > .full {
     color: #fff;
     font-size: 56px;
     text-transform: uppercase;
+    transition: all 250ms ease;
     margin-top: 14px;
 }
 main > .description {
@@ -161,20 +163,25 @@ main > .description {
     color: #d0d6f9;
     align-self: flex-start;
     margin-top: 32px;
+    opacity: 0;
+    transition: all 250ms ease;
+    transform-origin:left ;
 }
 main > img {
     grid-row: 1/4;
     grid-column: 2/3;
     opacity: 1;
+    transition: all 250ms ease;
+    transform-origin: bottom;
 }
 main > img[src = "./assets/crew/image-mark-shuttleworth.png"] {
-    transform: translateY(5.5vh);
+    transform: translateY(6.5vh);
 }
 main > img[src = "./assets/crew/image-victor-glover.png"] {
-    transform: translateY(5.5vh);
+    transform: translateY(6.5vh);
 }
 main > img[src = "./assets/crew/image-anousheh-ansari.png"] {
-    transform: translateY(10vh);
+    transform: translateY(11vh);
 }
 main > .buttons > button{
     cursor: pointer;
@@ -264,6 +271,7 @@ main > .buttons > button:hover{
         font-size: 16px;
         width: 75%;
         margin-top: 0;
+        opacity: 0;
     }
     main.info >.buttons {
         grid-row: 2/3;
@@ -464,17 +472,32 @@ main > .buttons > button:hover{
     main.info > img {
         border-bottom: 1px solid rgba(151, 151, 151, 0.25);
         grid-row: 1/2;
-        margin: 0em auto;
         align-self: center;
+    }
+    main.info > img[src= "./assets/crew/image-douglas-hurley.png"] {
+        height: 35vh;
+        margin: 1em auto 0em auto;
+    }
+    main.info > img[src= "./assets/crew/image-mark-shuttleworth.png"] {
+        height: 30vh;
+        margin: 3.75em auto 0em auto;
+    }
+    main.info > img[src= "./assets/crew/image-victor-glover.png"] {
+        margin-bottom: -4.25em;
+        margin: 4em auto 0em auto;
     }
     main.info > img[src= "./assets/crew/image-anousheh-ansari.png"] {
         margin-bottom: -4.25em;
+        margin: 5em auto 0em auto;
     }
     main.info >.description {
+        opacity: 0;
         align-self: center;
         font-size: 15px;
         line-height: 25px;
         width: 85vw;
         margin-bottom: 7.5em;
+        transition: all 250ms ease;
     }
 }
+

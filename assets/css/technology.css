@@ -181,6 +181,7 @@ main > .information {
     display: flex;
     flex-direction: column;
     grid-row: 2/3;
+    transition:all 250ms ease-in-out;
 }
 
 main > .information > .terms {
@@ -189,6 +190,7 @@ main > .information > .terms {
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: 0.5ch;
+    transition:all 250ms ease-in-out;
 }
 main > .information > .header {
     color: #fff;
@@ -196,6 +198,7 @@ main > .information > .header {
     text-transform: uppercase;
     font-size: 56px;
     margin-top: 0.5em;
+    transition:all 250ms ease-in-out;
 }
 main > .information > .info {
     color: #D0D6F9;
@@ -204,6 +207,7 @@ main > .information > .info {
     line-height: 32px;
     width: 70%;
     margin-top: 1em;
+    transition:all 250ms ease-in-out;
 }
 
 @media (max-width: 768px) {
